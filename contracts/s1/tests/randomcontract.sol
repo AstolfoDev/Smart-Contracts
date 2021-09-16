@@ -36,12 +36,12 @@ contract randomcontract {
         return randomvalue;
     }
     
-    // Function uses the last saved block diff. to return number > max.
+    // Function uses the last saved block diff. to return number < max.
     function getWithin(uint max) public view returns (uint) {
         return randomvalue % max;
     }
     
-    // Function regens the 'random' variable and uses latest block diff. to return number > max.
+    // Function regens the 'random' variable and uses latest block diff. to return number < max.
     function getWithinGen(uint max) public returns (uint) {
         generateValue();
         return randomvalue % max;
