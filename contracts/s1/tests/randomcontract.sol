@@ -30,7 +30,7 @@ contract randomcontract {
             )
         );
         
-        while (history[randomvalue] == true) {
+        while (history[randomvalue]) {
             randomvalue = uint256 (
                 keccak256 (
                     abi.encodePacked(block.difficulty, now)
